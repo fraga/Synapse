@@ -18,7 +18,7 @@ public class UniversalScene {
 			universalObject.addExtension(object);
 			
 			addUniversalObject(universalObject);
-			//Coloca a scena pai como observador do objeto filho
+			//parent scene observes child scenes
 			Managers.getState().addObjectObserver(object, scene);
 		}
 			
@@ -43,6 +43,6 @@ public class UniversalScene {
 	}
 	
 	public void destroy() {
-		//TODO: destruir todas as scenas filhas
+		//TODO: Destroy all child scenes here
 	}
 }

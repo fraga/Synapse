@@ -25,7 +25,7 @@ public class TaskManager implements Runnable {
 		_threadPool = createThreadPool();
 	}
 	
-	//Adiciona uma task na fila, caso a task tenha subTask as subs vão ser adicionadas na fila antes da principal
+	//Add one task to the queue. Subtasks have priority on the queue 
 	public void queueTask(ITask task) {
 		if (task.hasSubTask()) {
 			for (ITask subTask : task.getSubTask())
