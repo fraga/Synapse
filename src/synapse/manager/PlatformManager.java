@@ -18,7 +18,7 @@ public class PlatformManager {
 	}
 
 	public int getTotalProcessors() {
-		//TODO: Pegar a quantidade de processadores da maquina
+		//TODO: load total processors/cores from the machine here
 		return 2;
 	}
 }

@@ -17,9 +17,9 @@ public class UniversalObject {
 		getExtensions().add(object);
 		Managers.getState().addObjectSubject(object);
 		for (ISystemObject extension : getExtensions()) {		
-			//Inclui ele como observador de eventos de todas as outras extensoes
+			//observes extensions events
 			Managers.getState().addObjectObserver(extension, object);
-			//Coloca todas as outras extencoes como observador dele
+			//being observed by extensions
 			Managers.getState().addObjectObserver(object, extension);
 		}
 	}
@@ -32,6 +32,6 @@ public class UniversalObject {
 	}
 	
 	public void destroy() {
-		//TODO: destruir todos as objetos filhos
+		//TODO: Destroy all child objects here
 	}
 }
