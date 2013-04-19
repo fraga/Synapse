@@ -1,6 +1,6 @@
 Synapse
 =======
-[![Build Status](https://travis-ci.org/fraga/Synapse.png)](https://travis-ci.org/fraga/Synapse)
+[![Build Status](https://travis-ci.org/fraga/Synapse.png?branch=master)](https://travis-ci.org/fraga/Synapse)
 
 Parallel Game Engine for java.
 
