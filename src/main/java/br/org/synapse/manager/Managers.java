@@ -1,7 +1,7 @@
 /*
  * 
  */
-package synapse.manager;
+package br.org.synapse.manager;
 
 public final class Managers {
 	public static void loadManagers() {

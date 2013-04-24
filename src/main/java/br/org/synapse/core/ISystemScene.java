@@ -1,4 +1,4 @@
-package synapse.core;
+package br.org.synapse.core;
 
 import java.util.List;
 

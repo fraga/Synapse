@@ -1,7 +1,7 @@
 /*
  * 
  */
-package synapse.manager;
+package br.org.synapse.manager;
 
 public class PlatformManager {
 	private static PlatformManager _platformManager = null;

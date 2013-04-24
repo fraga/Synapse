@@ -1,4 +1,4 @@
-package synapse.core;
+package br.org.synapse.core;
 
 public class Clock implements ISubject {
 	private static Clock _mainClock = null;

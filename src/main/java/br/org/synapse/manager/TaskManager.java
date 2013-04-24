@@ -1,13 +1,13 @@
 /*
  * 
  */
-package synapse.manager;
+package br.org.synapse.manager;
 
 import java.util.Queue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import synapse.core.ITask;
+import br.org.synapse.core.ITask;
 
 public class TaskManager implements Runnable {
 	private static TaskManager _taskManager = null;

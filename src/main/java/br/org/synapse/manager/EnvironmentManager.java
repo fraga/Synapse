@@ -1,7 +1,7 @@
 /*
  * 
  */
-package synapse.manager;
+package br.org.synapse.manager;
 
 public class EnvironmentManager {
 	private static EnvironmentManager _environmentManager = null;

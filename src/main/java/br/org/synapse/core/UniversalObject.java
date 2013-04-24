@@ -1,9 +1,9 @@
-package synapse.core;
+package br.org.synapse.core;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import synapse.manager.Managers;
+import br.org.synapse.manager.Managers;
 
 public class UniversalObject {
 	private int _ID = 0;

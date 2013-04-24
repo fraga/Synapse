@@ -1,16 +1,16 @@
 /*
  * 
  */
-package synapse.manager;
+package br.org.synapse.manager;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-import synapse.core.ActionObserver;
-import synapse.core.ISystemObject;
-import synapse.core.IObserver;
-import synapse.core.ISystemScene;
-import synapse.core.ISubject;
+import br.org.synapse.core.ActionObserver;
+import br.org.synapse.core.ISystemObject;
+import br.org.synapse.core.IObserver;
+import br.org.synapse.core.ISystemScene;
+import br.org.synapse.core.ISubject;
 
 public class StateManager implements IObserver {
 	private static StateManager _stateManager = null;

@@ -1,4 +1,4 @@
-package synapse.manager;
+package br.org.synapse.manager;
 
 public class ServiceManager {
 	private static ServiceManager _serviceManager = null;

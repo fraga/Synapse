@@ -1,9 +1,9 @@
-package synapse.core;
+package br.org.synapse.core;
 
 import java.util.Dictionary;
 import java.util.Queue;
 
-import synapse.manager.Managers;
+import br.org.synapse.manager.Managers;
 
 public class Scheduler implements IObserver {
 

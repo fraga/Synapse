@@ -1,4 +1,4 @@
-package synapse.core;
+package br.org.synapse.core;
 
 public interface ISubject {
 	void addObserver(IObserver observer);

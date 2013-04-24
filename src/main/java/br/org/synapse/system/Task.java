@@ -1,8 +1,8 @@
-package synapse.system;
+package br.org.synapse.system;
 
 import java.util.List;
 
-import synapse.core.ITask;
+import br.org.synapse.core.ITask;
 
 public class Task implements ITask {
 
