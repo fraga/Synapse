@@ -6,14 +6,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class StateManagerTestCase {
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@Test
-	public void testInstanceNotNull() {
-		assertNotNull(StateManager.getStateManager());
-	} 
-
+    
+    @Before
+    public void setUp() throws Exception {
+    }
+    
+    @Test
+    public void testInstanceNotNull() {
+        assertNotNull(StateManager.getStateManager());
+    }
+    
 }
