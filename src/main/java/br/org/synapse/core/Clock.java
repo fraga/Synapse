@@ -25,6 +25,11 @@ public class Clock implements ISubject {
 		_number++;
 		_actionObserver.fireChangeEvent(this);
 	}
+	
+	public void reset(){
+	    _number = 0;
+	    _actionObserver.fireChangeEvent(this);
+	}
 
 	@Override
 	public void addObserver(IObserver observer) {
