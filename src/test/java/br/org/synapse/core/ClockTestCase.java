@@ -3,19 +3,9 @@ package br.org.synapse.core;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
-import br.org.synapse.mock.ObserverMock;
-
 public class ClockTestCase {
-    
-    @BeforeClass
-    public static void setUpBeforeClass() throws Exception {
-        Clock.getClock().tick();
-        Clock.getClock().tick();
-    }
     
     @Before
     public void ResetClock() {
