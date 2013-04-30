@@ -1,4 +1,4 @@
-package br.org.synapse.system;
+package br.org.synapse.test.system;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,8 @@ import javax.xml.ws.ServiceMode;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import br.org.synapse.system.Task;
 
 public class TaskTestCase {
     private Task _task;

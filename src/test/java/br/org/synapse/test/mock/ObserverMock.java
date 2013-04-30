@@ -1,4 +1,4 @@
-package br.org.synapse.mock;
+package br.org.synapse.test.mock;
 
 import br.org.synapse.core.IObserver;
 import br.org.synapse.core.ISubject;
