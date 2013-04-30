@@ -1,8 +1,10 @@
-package br.org.synapse.manager;
+package br.org.synapse.test.manager;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import br.org.synapse.manager.ServiceManager;
 
 public class ServiceManagerTestCase {
     
