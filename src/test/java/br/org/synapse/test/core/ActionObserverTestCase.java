@@ -39,14 +39,20 @@ public class ActionObserverTestCase {
         assertTrue(_actionObserver.getObservers().isEmpty());
     }
 
-    @Ignore
+    @Test
     public void testFireChangeEvent() {
-        fail("Not yet implemented");
+        ObserverMock obsMock1 = new ObserverMock();
+        _actionObserver.addObserver(obsMock1);
+        _actionObserver.fireChangeEvent(null);
+        assertSame(1, obsMock1.get_changeNotifyFired());
     }
 
-    @Ignore
+    @Test
     public void testFiredDestroyEvent() {
-        fail("Not yet implemented");
+        ObserverMock obsMock1 = new ObserverMock();
+        _actionObserver.addObserver(obsMock1);
+        _actionObserver.firedDestroyEvent(null);
+        assertSame(1, obsMock1.get_destroyNotifyFired());
     }
 
 }
