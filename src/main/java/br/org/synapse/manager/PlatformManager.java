@@ -18,7 +18,6 @@ public class PlatformManager {
     }
     
     public int getTotalProcessors() {
-        // TODO: load total processors/cores from the machine here
-        return 2;
+        return Runtime.getRuntime().availableProcessors();
     }
 }

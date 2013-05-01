@@ -14,7 +14,10 @@ public class PlatformManagerTestCase {
     
     @Test
     public void testGetTotalProcessors() {
-        assertEquals(2, PlatformManager.getPlatformManager()
+        //TODO: Runtime could be extracted to an interface and then we can inject it into a platform
+        int expectedProcessors = Runtime.getRuntime().availableProcessors();
+        
+        assertEquals(expectedProcessors, PlatformManager.getPlatformManager()
                 .getTotalProcessors());
     }
     
