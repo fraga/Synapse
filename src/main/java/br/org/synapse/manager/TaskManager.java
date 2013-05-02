@@ -27,6 +27,9 @@ public class TaskManager implements Runnable {
     
     // Add one task to the queue. Subtasks have priority on the queue
     public void queueTask(ITask task) {
+        if(task == null)
+            return;
+        
         if (task.hasSubTask()) {
             for (ITask subTask : task.getSubTask())
                 queueTask(subTask);
