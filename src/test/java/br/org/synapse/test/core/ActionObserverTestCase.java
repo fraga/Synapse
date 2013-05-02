@@ -1,13 +1,15 @@
 package br.org.synapse.test.core;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import br.org.synapse.core.ActionObserver;
-import br.org.synapse.test.mock.*;
+import br.org.synapse.test.mock.ObserverMock;
 
 public class ActionObserverTestCase {
     private ActionObserver _actionObserver;
@@ -39,14 +41,20 @@ public class ActionObserverTestCase {
         assertTrue(_actionObserver.getObservers().isEmpty());
     }
 
-    @Ignore
+    @Test
     public void testFireChangeEvent() {
-        fail("Not yet implemented");
+        ObserverMock obsMock1 = new ObserverMock();
+        _actionObserver.addObserver(obsMock1);
+        _actionObserver.fireChangeEvent(null);
+        assertSame(1, obsMock1.get_changeNotifyFired());
     }
 
-    @Ignore
+    @Test
     public void testFiredDestroyEvent() {
-        fail("Not yet implemented");
+        ObserverMock obsMock1 = new ObserverMock();
+        _actionObserver.addObserver(obsMock1);
+        _actionObserver.firedDestroyEvent(null);
+        assertSame(1, obsMock1.get_destroyNotifyFired());
     }
 
 }
