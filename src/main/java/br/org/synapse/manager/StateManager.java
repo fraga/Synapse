@@ -28,14 +28,14 @@ public class StateManager implements IObserver {
         
     }
     
-    private Dictionary<ISystemScene, ActionObserver> getSceneSubjects() {
+    public Dictionary<ISystemScene, ActionObserver> getSceneSubjects() {
         if (_sceneSubjects == null)
             _sceneSubjects = new Hashtable<ISystemScene, ActionObserver>();
         
         return _sceneSubjects;
     }
     
-    private Dictionary<ISystemObject, ActionObserver> getObjectSubjects() {
+    public Dictionary<ISystemObject, ActionObserver> getObjectSubjects() {
         if (_objectSubjects == null)
             _objectSubjects = new Hashtable<ISystemObject, ActionObserver>();
         
