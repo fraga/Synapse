@@ -1,8 +1,8 @@
 package br.org.synapse.test.system;
 
-import static org.junit.Assert.*;
-
-import javax.xml.ws.ServiceMode;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
