@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import br.org.synapse.manager.StateManager;
 import br.org.synapse.test.mock.ObserverMock;
+import br.org.synapse.test.mock.SceneMock;
 import br.org.synapse.test.mock.SystemObjectMock;
 
 public class StateManagerTestCase {
@@ -57,6 +58,16 @@ public class StateManagerTestCase {
         StateManager.getStateManager().addSceneSubject(sceneMock);
         //makes sure that sceneMock has a new actionObserver
         assertTrue(StateManager.getStateManager().getSceneSubjects().get(sceneMock) != null);
+    }
+    
+    @Test
+    public void testRemoveSceneSubject() {
+        SceneMock sceneMock = new SceneMock();
+        
+        StateManager.getStateManager().addSceneSubject(sceneMock);
+        assertTrue(StateManager.getStateManager().getSceneSubjects().get(sceneMock) != null);
+        StateManager.getStateManager().removeSceneSubject(sceneMock);
+        assertTrue(StateManager.getStateManager().getSceneSubjects().get(sceneMock) == null);
     }
     
 }
