@@ -23,4 +23,9 @@ public class StateManagerTestCase {
         assertNotNull(StateManager.getStateManager().getSceneSubjects());
     }
     
+    @Test
+    public void testGetObjectSubjectsNotNull() {
+        assertNotNull(StateManager.getStateManager().getObjectSubjects());
+    }
+    
 }
