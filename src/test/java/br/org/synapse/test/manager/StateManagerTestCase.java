@@ -39,4 +39,15 @@ public class StateManagerTestCase {
         assertTrue(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock).getObservers().contains(observerMock));
     }
     
+    @Test
+    public void testRemoveObjectObserver() {
+        ObserverMock observerMock = new ObserverMock();
+        SystemObjectMock systemObjectMock = new SystemObjectMock();
+        
+        StateManager.getStateManager().addObjectObserver(systemObjectMock, observerMock);
+        assertTrue(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock).getObservers().contains(observerMock));
+        StateManager.getStateManager().removeObjectObserver(systemObjectMock, observerMock);
+        assertFalse(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock).getObservers().contains(observerMock));
+    }
+    
 }
