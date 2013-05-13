@@ -50,4 +50,13 @@ public class StateManagerTestCase {
         assertFalse(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock).getObservers().contains(observerMock));
     }
     
+    @Test
+    public void testAddSceneSubject() {
+        SceneMock sceneMock = new SceneMock();
+        
+        StateManager.getStateManager().addSceneSubject(sceneMock);
+        //makes sure that sceneMock has a new actionObserver
+        assertTrue(StateManager.getStateManager().getSceneSubjects().get(sceneMock) != null);
+    }
+    
 }
