@@ -70,4 +70,13 @@ public class StateManagerTestCase {
         assertTrue(StateManager.getStateManager().getSceneSubjects().get(sceneMock) == null);
     }
     
+    @Test
+    public void testAddSceneObserver() {
+        SceneMock sceneMock = new SceneMock();
+        ObserverMock observerMock = new ObserverMock();
+        
+        StateManager.getStateManager().addSceneObserver(sceneMock, observerMock);
+        assertTrue(StateManager.getStateManager().getSceneSubjects().get(sceneMock).getObservers().contains(observerMock));
+    }
+    
 }
