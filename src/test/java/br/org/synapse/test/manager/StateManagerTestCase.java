@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import br.org.synapse.manager.StateManager;
+import br.org.synapse.test.mock.ObserverMock;
+import br.org.synapse.test.mock.SystemObjectMock;
 
 public class StateManagerTestCase {
     
@@ -26,6 +28,15 @@ public class StateManagerTestCase {
     @Test
     public void testGetObjectSubjectsNotNull() {
         assertNotNull(StateManager.getStateManager().getObjectSubjects());
+    }
+    
+    @Test
+    public void testAddObjectObserver() {
+        ObserverMock observerMock = new ObserverMock();
+        SystemObjectMock systemObjectMock = new SystemObjectMock();
+        
+        StateManager.getStateManager().addObjectObserver(systemObjectMock, observerMock);
+        assertTrue(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock).getObservers().contains(observerMock));
     }
     
 }
