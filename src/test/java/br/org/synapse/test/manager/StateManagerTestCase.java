@@ -130,5 +130,22 @@ public class StateManagerTestCase {
         
         assertSame(1, observerMock.get_changeNotifyFired());
     }
+    
+    
+    @Test
+    public void testSceneDestroyNotify() {
+        SceneMock scene = new SceneMock();
+        ObserverMock observerMock = new ObserverMock();
+        scene.addObserver(observerMock);
+        
+        StateManager.getStateManager().addSceneSubject(scene);
+        StateManager.getStateManager().addSceneObserver(scene, observerMock);
+        
+        assertTrue(StateManager.getStateManager().getSceneSubjects().get(scene).getObservers().contains(observerMock));
+        
+        StateManager.getStateManager().sceneDestroyNotify(scene);
+        
+        assertSame(1, observerMock.get_destroyNotifyFired());
+    }
 
 }
