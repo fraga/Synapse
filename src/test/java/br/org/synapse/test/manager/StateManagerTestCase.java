@@ -90,4 +90,8 @@ public class StateManagerTestCase {
         assertFalse(StateManager.getStateManager().getSceneSubjects().get(sceneMock).getObservers().contains(observerMock));
     }
     
+    @Test
+    public void testGetObjectSubjectIsNotNull() {
+    	assertNotNull(StateManager.getStateManager().getObjectSubjects());
+    }
 }
