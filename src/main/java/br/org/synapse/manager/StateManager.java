@@ -68,6 +68,7 @@ public class StateManager implements IObserver {
     
     public void addObjectSubject(ISystemObject subject) {
         if (getObjectSubjects().get(subject) == null) {
+        	//TODO: refactor this so ActionObserver is not created here
             getObjectSubjects().put(subject, new ActionObserver());
             subject.addObserver(this);
         }

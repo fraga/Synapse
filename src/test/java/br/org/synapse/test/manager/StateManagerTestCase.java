@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.org.synapse.core.ActionObserver;
 import br.org.synapse.manager.StateManager;
 import br.org.synapse.test.mock.ObserverMock;
 import br.org.synapse.test.mock.SceneMock;
@@ -94,4 +95,13 @@ public class StateManagerTestCase {
     public void testGetObjectSubjectIsNotNull() {
     	assertNotNull(StateManager.getStateManager().getObjectSubjects());
     }
+    
+    @Test
+    public void testAddObjectSubject() {
+        SystemObjectMock systemObjectMock = new SystemObjectMock();
+
+        StateManager.getStateManager().addObjectSubject(systemObjectMock);
+        assertEquals(ActionObserver.class, StateManager.getStateManager().getObjectSubjects().get(systemObjectMock).getClass());
+        assertNotNull(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock));
+    } 
 }
