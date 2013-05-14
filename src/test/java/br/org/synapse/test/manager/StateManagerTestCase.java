@@ -103,5 +103,15 @@ public class StateManagerTestCase {
         StateManager.getStateManager().addObjectSubject(systemObjectMock);
         assertEquals(ActionObserver.class, StateManager.getStateManager().getObjectSubjects().get(systemObjectMock).getClass());
         assertNotNull(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock));
-    } 
+    }
+    
+    @Test
+    public void testRemoveObjectSubject() {
+        SystemObjectMock systemObjectMock = new SystemObjectMock();
+
+        StateManager.getStateManager().addObjectSubject(systemObjectMock);
+        assertNotNull(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock));
+        StateManager.getStateManager().removeObjectSubject(systemObjectMock);
+        assertNull(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock));
+    }
 }
