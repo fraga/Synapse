@@ -10,6 +10,13 @@ import br.org.synapse.core.ITask;
 import br.org.synapse.system.Scene;
 
 public class SceneMock extends Scene implements ISystemScene{
+    private int _destroyNotifiedFired;
+    private int _changeNotifyFired;
+    
+    public SceneMock() {
+    	_destroyNotifiedFired = 0;
+    	_changeNotifyFired = 0;
+    }
     
     @Override
     public void addObserver(IObserver observer) {
@@ -23,12 +30,12 @@ public class SceneMock extends Scene implements ISystemScene{
 
     @Override
     public void changeNotify(ISubject sender) {
-        
+        _changeNotifyFired++;
     }
 
     @Override
     public void destroyNotify(ISubject sender) {
-        
+        _destroyNotifiedFired++;
     }
 
     @Override
@@ -54,6 +61,22 @@ public class SceneMock extends Scene implements ISystemScene{
     @Override
     public ITask getPrimaryTask() {
         return null;
+    }
+
+	public int get_destroyNotifiedFired() {
+	    return _destroyNotifiedFired;
+    }
+
+	public void set_destroyNotifiedFired(int _destroyNotifiedFired) {
+	    this._destroyNotifiedFired = _destroyNotifiedFired;
+    }
+
+	public int get_changeNotifyFired() {
+	    return _changeNotifyFired;
+    }
+
+	public void set_changeNotifyFired(int _changeNotifyFired) {
+	    this._changeNotifyFired = _changeNotifyFired;
     }
 
 }
