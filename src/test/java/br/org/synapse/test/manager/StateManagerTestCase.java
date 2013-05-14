@@ -114,4 +114,21 @@ public class StateManagerTestCase {
         StateManager.getStateManager().removeObjectSubject(systemObjectMock);
         assertNull(StateManager.getStateManager().getObjectSubjects().get(systemObjectMock));
     }
+    
+    @Test
+    public void testSceneChangeNotify() {
+        SceneMock scene = new SceneMock();
+        ObserverMock observerMock = new ObserverMock();
+        scene.addObserver(observerMock);
+        
+        StateManager.getStateManager().addSceneSubject(scene);
+        StateManager.getStateManager().addSceneObserver(scene, observerMock);
+        
+        assertTrue(StateManager.getStateManager().getSceneSubjects().get(scene).getObservers().contains(observerMock));
+        
+        StateManager.getStateManager().sceneChangeNotify(scene);
+        
+        assertSame(1, observerMock.get_changeNotifyFired());
+    }
+
 }
